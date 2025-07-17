@@ -114,7 +114,7 @@ export default function MerchantDashboard() {
       const store = storeResult[0]
       setStoreData(store)
 
-      // Load categories with product count
+      // Load categories with product count - استخدام store_id الصحيح
       const categoriesResult = await blink.db.categories.list({
         where: { store_id: store.store_id },
         orderBy: { sort_order: 'asc' }

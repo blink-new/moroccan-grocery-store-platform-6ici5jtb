@@ -6,6 +6,7 @@ import MerchantRegister from './pages/MerchantRegister'
 import MerchantDashboard from './pages/MerchantDashboard'
 import StorePage from './pages/StorePage'
 import AdminPanel from './pages/AdminPanel'
+import MyAdminPanel from './pages/MyAdminPanel'
 import { Toaster } from './components/ui/toaster'
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
           <Route path="/dashboard/:merchantId" element={<MerchantDashboard />} />
           <Route path="/store/:storeId" element={<StorePage />} />
           <Route path="/admin/:adminId" element={<AdminPanel />} />
+          <Route path="/my-admin" element={<MyAdminPanel />} />
         </Routes>
         <Toaster />
       </div>

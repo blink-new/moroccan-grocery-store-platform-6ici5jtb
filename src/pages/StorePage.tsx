@@ -93,10 +93,10 @@ export default function StorePage() {
       const store = storeResult[0]
       setStoreData(store)
 
-      // Load categories for this store
+      // Load categories for this store - استخدام store_id الصحيح
       const categoriesResult = await blink.db.categories.list({
         where: { 
-          store_id: storeId,
+          store_id: store.store_id, // استخدام store.store_id بدلاً من storeId
           is_visible: true 
         },
         orderBy: { sort_order: 'asc' }
@@ -120,10 +120,10 @@ export default function StorePage() {
 
       setCategories(categoriesWithCount)
 
-      // Load products for this store
+      // Load products for this store - استخدام store_id الصحيح
       const productsResult = await blink.db.products.list({
         where: { 
-          store_id: storeId,
+          store_id: store.store_id, // استخدام store.store_id بدلاً من storeId
           is_visible: true 
         },
         orderBy: { sort_order: 'asc' }

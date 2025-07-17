@@ -45,12 +45,22 @@ export default function HomePage() {
                 <p className="text-sm text-muted-foreground">منصة المتاجر المغربية</p>
               </div>
             </div>
-            <Button 
-              onClick={() => navigate('/register')}
-              className="bg-primary hover:bg-primary/90"
-            >
-              تسجيل تاجر جديد
-            </Button>
+            <div className="flex gap-2">
+              <Button 
+                onClick={() => navigate('/register')}
+                className="bg-primary hover:bg-primary/90"
+              >
+                تسجيل تاجر جديد
+              </Button>
+              <Button 
+                variant="outline"
+                onClick={() => navigate('/my-admin')}
+                className="gap-2"
+              >
+                <Shield className="h-4 w-4" />
+                لوحة التحكم الخاصة
+              </Button>
+            </div>
           </div>
         </div>
       </header>
@@ -214,7 +224,7 @@ export default function HomePage() {
       <footer className="bg-white/50 border-t border-border/50 mt-20">
         <div className="container mx-auto px-4 py-8">
           <div className="text-center text-muted-foreground">
-            <p>© 2024 متجر البقال الإلكتروني - منصة المتاجر المغربية</p>
+            <p>2024 متجر البقال الإلكتروني - منصة المتاجر المغربية</p>
             <p className="text-sm mt-2">مصمم خصيصاً للسوق المغربي</p>
           </div>
         </div>
